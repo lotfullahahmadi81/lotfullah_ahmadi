@@ -30,6 +30,24 @@ function typeEffect(){
     setTimeout(typeEffect,isDeleting?deletingSpeed:typingSpeed);
 }
 typeEffect();
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }else{
+            entry.target.classList.remove("show");
+        }
+      });
+    },
+    {
+      threshold: 0.3
+    }
+  );
+
+  document.querySelectorAll(".reveal").forEach(el => {
+    observer.observe(el);
+  });
 const skills = document.querySelectorAll('.skill');
 window.onscroll = () => {
     skills.forEach(skill => {
