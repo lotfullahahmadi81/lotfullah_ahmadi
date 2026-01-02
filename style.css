@@ -1,8 +1,14 @@
+*{
+  box-sizing: border-box;
+}
 body {
   background: linear-gradient(90deg, #02121b, #165580);
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
   overflow-x: hidden!important;
+}
+section{
+  overflow: hidden;
 }
 ::-webkit-scrollbar{
   width: 6px;
@@ -210,7 +216,6 @@ background: linear-gradient(90deg, #02121b, #165580);
   border: 1px solid #00c6ff;
   border-radius: 12px;
   padding: 5px;
-  display: inline-block;
   margin-top: 30px;
 }
 .hero .tran{
@@ -279,6 +284,11 @@ background: linear-gradient(90deg, #02121b, #165580);
   text-align: center;
   margin: 35px;
 }
+@media screen and (max-width:692px) {
+  .custom-photo .skill-photo{
+    margin: 15px 5px;
+  }
+}
 .custom-photo .skill-photo p{
   font-size: 24px;
   color: #00c6ff;
@@ -295,11 +305,11 @@ background: linear-gradient(90deg, #02121b, #165580);
    background: linear-gradient(90deg,#02121b,#165580);
 }
 .skills-section{
-  width: 50vw;
+  width: 100%;
 }
 @media screen and (max-width:991px){
   .skills-section{
-  width: 75vw;
+  width: 100%;
 }
 }
     
@@ -318,6 +328,7 @@ background: linear-gradient(90deg, #02121b, #165580);
     justify-content: space-between;
     margin-bottom: 8px;
     font-size: 15px;
+    flex-wrap: wrap;
 }
 
 .skill-header small {
@@ -353,10 +364,11 @@ background: linear-gradient(90deg, #02121b, #165580);
   margin-top: 20px;
   border-radius: 12px;
   box-shadow: 0 0 4px 1px #fff;
-  width: 55vw;
+  width: 60%;
+  max-width: 100%;
   height: auto;
   transition: 0.3s;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 .project-photo:hover{
   transition: 0.3s;
